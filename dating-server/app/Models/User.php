@@ -65,4 +65,17 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(User::class, "user_blocking", "blocking_id", "blocked_id");
     }
+
+
+    // Messaging
+    public function sendingMessage()
+    {
+        return $this->belongsToMany(User::class, "user_messaging", "receiver_id", "sender_id");
+    }
+    
+    public function receivingMessage()
+    {
+        return $this->belongsToMany(User::class, "user_messaging", "sender_id", "receiver_id");
+    }
+    
 }
