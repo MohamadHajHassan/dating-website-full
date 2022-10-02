@@ -41,4 +41,16 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    // Favoriting
+    public function favoriting()
+    {
+        return $this->belongsToMany(User::class, "user_favoriting", "favorited_id", "favoriting_id");
+    }
+    
+    public function favorited()
+    {
+        return $this->belongsToMany(User::class, "user_favoriting", "favoriting_id", "favorited_id");
+    }
 }
