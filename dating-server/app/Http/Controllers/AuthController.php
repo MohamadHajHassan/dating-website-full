@@ -59,7 +59,7 @@ class AuthController extends Controller
 
     }
 
-    
+
     public function createNewToken($token){
 
         return response() -> json([
@@ -69,6 +69,11 @@ class AuthController extends Controller
             "user" => auth() -> user()
         ]);
 
+    }
+
+
+    public function getProfile(){
+        return response() -> json(auth() -> user());
     }
 
 }
