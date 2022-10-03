@@ -1,0 +1,69 @@
+/* Utilities */
+.container {
+    width: 100%;
+}
+.test {
+    border: 1px solid red;
+}
+.flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.btn {
+    border-radius: 20px;
+    border: none;
+    padding: 10px 30px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.btn-blue {
+    background-color: #1d9bf0;
+    color: white;
+}
+
+/* Register */
+.register-title {
+    font-size: 30px;
+    font-weight: bolder;
+    margin: 1%;
+}
+.register-subtitle {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 1%;
+}
+.form {
+    align-items: flex-start;
+    width: 40vw;
+}
+.form * {
+    width: 100%;
+    border-radius: 5px;
+}
+.form input,
+.form select {
+    border: 1px solid #999;
+    padding: 2%;
+    margin-bottom: 3%;
+}
+.form ::placeholder {
+    padding-left: 1%;
+    font-size: 14px;
+}
+.register-parag {
+    margin: 2%;
+    max-width: 40vw;
+}
+.register-parag a {
+    color: #1d9bf0;
+}
+.register-parag a:hover {
+    cursor: pointer;
+}
