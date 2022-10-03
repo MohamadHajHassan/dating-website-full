@@ -1,6 +1,6 @@
 const dating_pages = {};
 
-dating_pages.baseURL = "";
+dating_pages.baseURL = "http://127.0.0.1:8000/api/v0.1/auth";
 
 // Custom console
 dating_pages.Console = (title, values, oneValue = true) => {
@@ -43,20 +43,37 @@ dating_pages.loadFor = page => {
 };
 
 dating_pages.load_register = async () => {
+    // Variables
+    const register_url = `${dating_pages.baseURL}/register`;
+
     const register_signin_btn = document.getElementById("register-signin-btn");
     const login_register_btn = document.getElementById("login-register-btn");
     const signin_dialog = document.getElementById("signin-dialog");
+    const register_btn = document.getElementById("register-btn");
+    const name_input = document.getElementById("name");
+    const location_input = document.getElementById("location");
+    const gender_input = document.getElementById("gender");
+    const intrest_input = document.getElementById("intrest");
+    const email_input = document.getElementById("email");
+    const password_input = document.getElementById("password");
+    const password_confirmation_input = document.getElementById(
+        "password-confirmation"
+    );
+    const register_data = {
+        name: name_input.value,
+        location: location_input.value,
+        email: email_input.value,
+        password: password_input.value,
+        password_confirmation: password_confirmation_input.value,
+        gender: gender_input.value,
+        intrested_in: intrest_input.value,
+        age: "",
+        bio: "",
+        picture: "",
+        visible: "1",
+    };
 
-    register_signin_btn.addEventListener("click", e => {
-        e.preventDefault();
-        openLoginDialog();
-    });
-
-    login_register_btn.addEventListener("click", e => {
-        e.preventDefault();
-        closeLoginDialog();
-    });
-
+    // Functions
     const openLoginDialog = () => {
         signin_dialog.showModal();
         document.body.style.overflow = "hidden";
@@ -68,4 +85,24 @@ dating_pages.load_register = async () => {
         document.body.style.overflow = "auto";
         signin_dialog.classList.add("hidden");
     };
+
+    //
+    register_signin_btn.addEventListener("click", e => {
+        e.preventDefault();
+        openLoginDialog();
+    });
+
+    login_register_btn.addEventListener("click", e => {
+        e.preventDefault();
+        closeLoginDialog();
+    });
+
+    register_btn.addEventListener("click", e => {
+        e.preventDefault();
+        const response_register = dating_pages.postAPI(
+            register_url,
+            register_data
+        );
+        dating_pages.Console("Register api", response_register.data);
+    });
 };
