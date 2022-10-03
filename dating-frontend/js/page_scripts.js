@@ -1,6 +1,6 @@
 const dating_pages = {};
 
-dating_pages.baseURL = "http://127.0.0.1:8000/api/v0.1/auth";
+dating_pages.baseURL = "http://127.0.0.1:8000/api/v0.1";
 
 // Custom console
 dating_pages.Console = (title, values, oneValue = true) => {
@@ -45,11 +45,15 @@ dating_pages.loadFor = page => {
 dating_pages.load_register = async () => {
     // Variables
     const register_url = `${dating_pages.baseURL}/register`;
+    const login_url = `${dating_pages.baseURL}/login`;
 
     const register_signin_btn = document.getElementById("register-signin-btn");
     const login_register_btn = document.getElementById("login-register-btn");
     const signin_dialog = document.getElementById("signin-dialog");
     const register_btn = document.getElementById("register-btn");
+    const login_btn = document.getElementById("login-btn");
+    const email_login = document.getElementById("email-login");
+    const password_login = document.getElementById("password-login");
     const name_input = document.getElementById("name");
     const location_input = document.getElementById("location");
     const gender_input = document.getElementById("gender");
@@ -71,6 +75,10 @@ dating_pages.load_register = async () => {
         bio: "",
         picture: "",
         visible: "1",
+    };
+    const login_data = {
+        email: email_login.value,
+        password: password_login.value,
     };
 
     // Functions
@@ -104,5 +112,11 @@ dating_pages.load_register = async () => {
             register_data
         );
         dating_pages.Console("Register api", response_register.data);
+    });
+
+    login_btn.addEventListener("click", e => {
+        e.preventDefault();
+        const response_login = dating_pages.postAPI(login_url, login_data);
+        dating_pages.Console("Login api", response_login.data);
     });
 };

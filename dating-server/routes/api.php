@@ -10,10 +10,11 @@ Route::group(["prefix" => "v0.1"], function(){
     Route::get("/users", [LandingController::class, "fetchLanding"])->name("landing-user");
 
     Route::group(["prefix" => "auth", "middleware" => "api"], function(){
-        Route::post("/register", [AuthController::class, "register"]);
-        Route::post("/login", [AuthController::class, "login"]);
         Route::get("/profile", [AuthController::class, "getProfile"]);
         Route::post("/logout", [AuthController::class, "logout"]);
     });
+
+    Route::post("/register", [AuthController::class, "register"]);
+    Route::post("/login", [AuthController::class, "login"]);
 
 });
