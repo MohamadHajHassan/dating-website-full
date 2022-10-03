@@ -41,3 +41,31 @@ dating_pages.postAPI = async (api_url, api_data, api_token = null) => {
 dating_pages.loadFor = page => {
     eval(`dating_pages.load_${page}();`);
 };
+
+dating_pages.load_register = async () => {
+    const register_signin_btn = document.getElementById("register-signin-btn");
+    const login_register_btn = document.getElementById("login-register-btn");
+    const signin_dialog = document.getElementById("signin-dialog");
+
+    register_signin_btn.addEventListener("click", e => {
+        e.preventDefault();
+        openLoginDialog();
+    });
+
+    login_register_btn.addEventListener("click", e => {
+        e.preventDefault();
+        closeLoginDialog();
+    });
+
+    const openLoginDialog = () => {
+        signin_dialog.showModal();
+        document.body.style.overflow = "hidden";
+        signin_dialog.classList.remove("hidden");
+    };
+
+    const closeLoginDialog = () => {
+        signin_dialog.close();
+        document.body.style.overflow = "auto";
+        signin_dialog.classList.add("hidden");
+    };
+};

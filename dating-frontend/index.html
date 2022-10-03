@@ -66,14 +66,14 @@
 
             <p class="register-parag">
                 Already have an account? Try
-                <a>Sign in</a>
+                <a id="register-signin-btn">Sign in</a>
                 instead
             </p>
         </section>
         <!-- End Register -->
 
         <!-- Start Login -->
-        <dialog class="flex-column modal">
+        <dialog id="signin-dialog" class="flex-column modal hidden">
             <h2 class="register-title">Sign in</h2>
 
             <form class="flex-column form">
@@ -96,14 +96,14 @@
 
             <p class="register-parag">
                 Don't have an account yet?
-                <a>Sign up</a>
+                <a id="login-register-btn">Sign up</a>
             </p>
         </dialog>
         <!-- End Login -->
 
         <!-- Scripts -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"></script>
-        <script src="page_scripts.js"></script>
+        <script src="js/page_scripts.js"></script>
         <script>
             dating_pages.loadFor("register");
         </script>

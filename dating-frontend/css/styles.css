@@ -27,6 +27,9 @@
     background-color: #1d9bf0;
     color: white;
 }
+.hidden {
+    display: none;
+}
 
 /* Register */
 .register-title {
@@ -77,6 +80,7 @@
     background-color: aquamarine;
     border-radius: 15px;
     border: transparent;
+    margin: auto;
 }
 .modal::backdrop {
     background: black;
