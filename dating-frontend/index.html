@@ -10,6 +10,60 @@
     </head>
 
     <body>
+        <!-- Start Register -->
+        <section>
+            <h1>Dating website</h1>
+            <p>Join Now</p>
+
+            <form action="">
+                <label for="name">Name</label>
+                <input id="name" type="text" placeholder="Name" required />
+
+                <label for="location">Location</label>
+                <input id="location" type="text" required />
+
+                <label for="gender">Gender</label>
+                <select name="gender" id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">other</option>
+                </select>
+
+                <label for="intrest">Intrested in</label>
+                <select name="intrest" id="intrest">
+                    <option value="males">Males</option>
+                    <option value="females">Females</option>
+                    <option value="both">Both</option>
+                </select>
+
+                <label for="email">Email</label>
+                <input
+                    id="email"
+                    type="email"
+                    placeholder="Enter your email here"
+                    required />
+
+                <label for="password">Password</label>
+                <input
+                    id="password"
+                    type="password"
+                    placeholder="Enter a new password here"
+                    required />
+
+                <button type="submit">Sign up</button>
+            </form>
+
+            <div>
+                <p>Already have an account?</p>
+                <p>
+                    Try
+                    <a>Sign in</a>
+                    instead
+                </p>
+            </div>
+        </section>
+        <!-- End Register -->
+
         <!-- Scripts -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"></script>
         <script src="page_scripts.js"></script>
