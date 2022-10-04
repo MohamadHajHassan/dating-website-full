@@ -124,6 +124,7 @@ dating_pages.load_register = async () => {
 dating_pages.load_landing = async () => {
     // Variables
     const profile_1 = document.getElementById("profile1");
+    const profile_2 = document.getElementById("profile2");
     const close_modal = document.getElementById("close-modal");
     const modal = document.getElementById("modal");
     const chat_page = document.getElementById("chat-page");
@@ -183,6 +184,11 @@ dating_pages.load_landing = async () => {
 
     //
     profile_1.addEventListener("click", e => {
+        e.preventDefault();
+        openModal();
+    });
+
+    profile_2.addEventListener("click", e => {
         e.preventDefault();
         openModal();
     });
