@@ -1,10 +1,10 @@
 const dating_pages = {};
 
-dating_pages.baseURL = "http://127.0.0.1:8000/api/v0.1";
+dating_pages.baseURL = "http://127.0.0.1:8000/api/v0.1/auth";
 
 // Custom console
 dating_pages.Console = (title, values, oneValue = true) => {
-    console.log(`--- title ---`);
+    console.log(`--- ${title} ---`);
     if (oneValue) {
         console.log(values);
     } else {
@@ -12,7 +12,7 @@ dating_pages.Console = (title, values, oneValue = true) => {
             console.log(values[i]);
         }
     }
-    console.log(`--/ title ---`);
+    console.log(`--/ ${title} ---`);
 };
 
 // Get API
