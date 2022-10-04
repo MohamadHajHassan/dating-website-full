@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto"
+            rel="stylesheet" />
+        <title>Landing Page</title>
+    </head>
+
+    <body>
+        <!-- Start Nav Bar -->
+        <nav class="flex navigation">
+            <img class="logo" src="assets/logo" alt="logo" />
+            <p class="title">Dating Website</p>
+            <ul class="flex nav-links">
+                <li id="feed-page-btn" class="nav-item nav-selected js-nav">
+                    Feed
+                </li>
+                <li id="favorites-page-btn" class="nav-item js-nav">
+                    Favorites
+                </li>
+                <li id="chat-page-btn" class="nav-item js-nav">Chat</li>
+                <button class="nav-item btn btn-blue">Log out</button>
+            </ul>
+        </nav>
+        <!-- End Nav Bar -->
+
+        <!-- Start Feed -->
+        <section id="feed-page" class="flex feed-container js-pages">
+            <a id="profile1" class="flex-column card">
+                <img src="assets/pic.jpg" alt="" />
+                <p>Name</p>
+                <p>Location</p>
+            </a>
+            <a class="flex-column card">
+                <img src="assets/pic.jpg" alt="" />
+                <p>Name</p>
+                <p>Location</p>
+            </a>
+            <a class="flex-column card">
+                <img src="assets/pic.jpg" alt="" />
+                <p>Name</p>
+                <p>Location</p>
+            </a>
+            <a class="flex-column card">
+                <img src="assets/pic.jpg" alt="" />
+                <p>Name</p>
+                <p>Location</p>
+            </a>
+            <a class="flex-column card">
+                <img src="assets/pic.jpg" alt="" />
+                <p>Name</p>
+                <p>Location</p>
+            </a>
+            <a class="flex-column card">
+                <img src="assets/pic.jpg" alt="" />
+                <p>Name</p>
+                <p>Location</p>
+            </a>
+            <a class="flex-column card">
+                <img src="assets/pic.jpg" alt="" />
+                <p>Name</p>
+                <p>Location</p>
+            </a>
+            <a class="flex-column card">
+                <img src="assets/pic.jpg" alt="" />
+                <p>Name</p>
+                <p>Location</p>
+            </a>
+        </section>
+        <!-- End Feed -->
+
+        <!-- Start Profile Dialog -->
+        <dialog class="modal" id="modal">
+            <div class="flex modal-title">
+                <h3>Name</h3>
+                <a id="close-modal" href="">
+                    <img src="assets/x.svg" alt="" />
+                </a>
+            </div>
+            <div class="flex">
+                <img class="modal-image" src="assets/pic.jpg" alt="" />
+                <div class="flex-column modal-info">
+                    <p>Location</p>
+                    <p>Age</p>
+                    <p>Gender</p>
+                    <p>Intrested in</p>
+                    <p>Bio</p>
+                </div>
+            </div>
+            <div class="flex modal-btns">
+                <a class="btn btn-blue" href="">Chat</a>
+                <a class="btn btn-blue" href="">Add to favorites</a>
+                <a class="btn btn-blue" href="">Block</a>
+            </div>
+        </dialog>
+        <!-- End Profile Dialog -->
+
+        <!-- Start Favorites -->
+        <section
+            id="favorites-page"
+            class="flex feed-container not-visible js-pages">
+            <a id="profile2" class="flex-column card">
+                <img src="assets/pic.jpg" alt="" />
+                <p>Name</p>
+                <p>Location</p>
+            </a>
+            <a class="flex-column card">
+                <img src="assets/pic.jpg" alt="" />
+                <p>Name</p>
+                <p>Location</p>
+            </a>
+            <a class="flex-column card">
+                <img src="assets/pic.jpg" alt="" />
+                <p>Name</p>
+                <p>Location</p>
+            </a>
+            <a class="flex-column card">
+                <img src="assets/pic.jpg" alt="" />
+                <p>Name</p>
+                <p>Location</p>
+            </a>
+        </section>
+        <!-- End Favorites -->
+
+        <!-- Start Chat -->
+        <section id="chat-page" class="messages js-pages not-visible">
+            <div class="chat-list">
+                <div class="chat-element">
+                    <img src="assets/pic.jpg" alt="" />
+                    <p>Name</p>
+                </div>
+                <div class="chat-element chat-element-selected">
+                    <img src="assets/pic.jpg" alt="" />
+                    <p>Name</p>
+                </div>
+                <div class="chat-element">
+                    <img src="assets/pic.jpg" alt="" />
+                    <p>Name</p>
+                </div>
+                <div class="chat-element">
+                    <img src="assets/pic.jpg" alt="" />
+                    <p>Name</p>
+                </div>
+                <div class="chat-element">
+                    <img src="assets/pic.jpg" alt="" />
+                    <p>Name</p>
+                </div>
+                <div class="chat-element">
+                    <img src="assets/pic.jpg" alt="" />
+                    <p>Name</p>
+                </div>
+                <div class="chat-element">
+                    <img src="assets/pic.jpg" alt="" />
+                    <p>Name</p>
+                </div>
+                <div class="chat-element">
+                    <img src="assets/pic.jpg" alt="" />
+                    <p>Name</p>
+                </div>
+                <div class="chat-element">
+                    <img src="assets/pic.jpg" alt="" />
+                    <p>Name</p>
+                </div>
+                <div class="chat-element">
+                    <img src="assets/pic.jpg" alt="" />
+                    <p>Name</p>
+                </div>
+                <div class="chat-element">
+                    <img src="assets/pic.jpg" alt="" />
+                    <p>Name</p>
+                </div>
+                <div class="chat-element">
+                    <img src="assets/pic.jpg" alt="" />
+                    <p>Name</p>
+                </div>
+            </div>
+            <div>
+                <div class="chat-element message-header">
+                    <img src="assets/pic.jpg" alt="" />
+                    <p>Name</p>
+                </div>
+                <div class="chat-container">
+                    <div class="message">
+                        Hello there mklsgm sms gl gmks gmk sgmkds gmkd
+                    </div>
+                    <div class="message r-message">
+                        Hi sjdjnkcdsd nsdcjn jnscjnc nncd nsdnjscjk
+                    </div>
+                    <div class="message">
+                        Hello there mkls mmklmksd mklfg msd;glm s;mlfd ;gls
+                    </div>
+                    <div class="message r-message">
+                        Hi nklsdfjnksd ndsnkl fdnklf nkl nkla nk sfnka nkfnkasl
+                    </div>
+                    <div class="message">
+                        Hello there mklsgm sms gl gmks gmk sgmkds gmkd
+                    </div>
+                    <div class="message r-message">
+                        Hi sjdjnkcdsd nsdcjn jnscjnc nncd nsdnjscjk
+                    </div>
+                    <div class="message">
+                        Hello there mkls mmklmksd mklfg msd;glm s;mlfd ;gls
+                    </div>
+                    <div class="message r-message">
+                        Hi nklsdfjnksd ndsnkl fdnklf nkl nkla nk sfnka nkfnkasl
+                    </div>
+                    <div class="message">
+                        Hello there mklsgm sms gl gmks gmk sgmkds gmkd
+                    </div>
+                    <div class="message r-message">
+                        Hi sjdjnkcdsd nsdcjn jnscjnc nncd nsdnjscjk
+                    </div>
+                    <div class="message">
+                        Hello there mkls mmklmksd mklfg msd;glm s;mlfd ;gls
+                    </div>
+                    <div class="message r-message">
+                        Hi nklsdfjnksd ndsnkl fdnklf nkl nkla nk sfnka nkfnkasl
+                    </div>
+                </div>
+                <div class="flex chat-input-container">
+                    <input
+                        type="text"
+                        class="chat-input"
+                        placeholder="Message Here..." />
+                    <span class="send">
+                        <img src="assets/send.svg" alt="" />
+                    </span>
+                </div>
+            </div>
+        </section>
+        <!-- End Chat -->
+
+        <!-- Scripts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"></script>
+        <script src="js/page_scripts.js"></script>
+        <script>
+            dating_pages.loadFor("landing");
+        </script>
+    </body>
+</html>
