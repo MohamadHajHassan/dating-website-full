@@ -120,3 +120,33 @@ dating_pages.load_register = async () => {
         dating_pages.Console("Login api", response_login.data);
     });
 };
+
+dating_pages.load_landing = async () => {
+    // Variables
+    const profile_1 = document.getElementById("profile1");
+    const close_modal = document.getElementById("close-modal");
+    const modal = document.getElementById("modal");
+
+    // Funstions
+    const openModal = () => {
+        modal.showModal();
+        document.body.style.overflow = "hidden";
+        document.body.style.userSelect = "none";
+    };
+
+    const closeModal = () => {
+        modal.close();
+        document.body.style.overflow = "auto";
+        document.body.style.userSelect = "auto";
+    };
+
+    //
+    profile_1.addEventListener("click", e => {
+        e.preventDefault();
+        openModal();
+    });
+    close_modal.addEventListener("click", e => {
+        e.preventDefault();
+        closeModal();
+    });
+};
