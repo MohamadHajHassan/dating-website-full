@@ -24,7 +24,7 @@
     cursor: pointer;
 }
 .btn-blue {
-    background-color: #1d9bf0;
+    background-color: #5ab7d4;
     color: white;
 }
 .hidden {
@@ -69,7 +69,7 @@
     max-width: 40vw;
 }
 .register-parag a {
-    color: #1d9bf0;
+    color: #5ab7d4;
 }
 .register-parag a:hover {
     cursor: pointer;
@@ -87,4 +87,54 @@
     opacity: 0.4;
     overflow: hidden;
     user-select: none;
+}
+
+/* 
+Landing
+*/
+
+/* nav bar */
+.navigation {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    background-color: red;
+}
+.logo {
+    height: 30px;
+    width: 30px;
+    margin: 25px;
+    margin-left: 50px;
+}
+.title {
+    font-size: 30px;
+    font-weight: bold;
+}
+.nav-links {
+    list-style: none;
+    font-weight: bold;
+    width: 30%;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 50px;
+}
+.nav-item {
+    cursor: pointer;
+    font-size: 18px;
+}
+.nav-item:hover {
+    color: white;
+}
+.nav-links button {
+    margin-bottom: 10px;
+}
+.nav-links button:hover {
+    color: black;
+}
+.nav-selected {
+    text-decoration: underline;
+    color: #5ab7d4;
+}
+.nav-selected:hover {
+    color: #5ab7d4;
 }
