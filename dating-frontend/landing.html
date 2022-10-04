@@ -28,7 +28,7 @@
 
         <!-- Start Feed -->
         <section class="flex feed-container">
-            <a class="flex-column card">
+            <a id="profile1" class="flex-column card">
                 <img src="assets/pic.jpg" alt="" />
                 <p>Name</p>
                 <p>Location</p>
@@ -70,6 +70,32 @@
             </a>
         </section>
         <!-- End Feed -->
+
+        <!-- Start Profile Dialog -->
+        <dialog class="modal" id="modal">
+            <div class="flex modal-title">
+                <h3>Name</h3>
+                <a href="">
+                    <img src="assets/x.svg" alt="" />
+                </a>
+            </div>
+            <div class="flex">
+                <img class="modal-image" src="assets/pic.jpg" alt="" />
+                <div class="flex-column modal-info">
+                    <p>Location</p>
+                    <p>Age</p>
+                    <p>Gender</p>
+                    <p>Intrested in</p>
+                    <p>Bio</p>
+                </div>
+            </div>
+            <div class="flex modal-btns">
+                <a class="btn btn-blue" href="">Chat</a>
+                <a class="btn btn-blue" href="">Add to favorites</a>
+                <a class="btn btn-blue" href="">Block</a>
+            </div>
+        </dialog>
+        <!-- End Profile Dialog -->
 
         <!-- Scripts -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"></script>
