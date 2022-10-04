@@ -18,16 +18,20 @@
             <img class="logo" src="assets/logo" alt="logo" />
             <p class="title">Dating Website</p>
             <ul class="flex nav-links">
-                <li class="nav-item nav-selected">Feed</li>
-                <li class="nav-item">Favorites</li>
-                <li class="nav-item">Chat</li>
+                <li id="feed-page-btn" class="nav-item nav-selected js-nav">
+                    Feed
+                </li>
+                <li id="favorites-page-btn" class="nav-item js-nav">
+                    Favorites
+                </li>
+                <li id="chat-page-btn" class="nav-item js-nav">Chat</li>
                 <button class="nav-item btn btn-blue">Log out</button>
             </ul>
         </nav>
         <!-- End Nav Bar -->
 
         <!-- Start Feed -->
-        <section class="flex feed-container hidden">
+        <section id="feed-page" class="flex feed-container js-pages">
             <a id="profile1" class="flex-column card">
                 <img src="assets/pic.jpg" alt="" />
                 <p>Name</p>
@@ -98,7 +102,7 @@
         <!-- End Profile Dialog -->
 
         <!-- Start Chat -->
-        <section class="messages">
+        <section id="chat-page" class="messages js-pages not-visible">
             <div class="chat-list">
                 <div class="chat-element">
                     <img src="assets/pic.jpg" alt="" />

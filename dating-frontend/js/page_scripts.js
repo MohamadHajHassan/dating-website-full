@@ -126,8 +126,16 @@ dating_pages.load_landing = async () => {
     const profile_1 = document.getElementById("profile1");
     const close_modal = document.getElementById("close-modal");
     const modal = document.getElementById("modal");
+    const chat_page = document.getElementById("chat-page");
+    const feed_page = document.getElementById("feed-page");
+    const favorites_page = document.getElementById("favorites-page");
+    const feed_page_btn = document.getElementById("feed-page-btn");
+    const favorites_page_btn = document.getElementById("favorites-page-btn");
+    const chat_page_btn = document.getElementById("chat-page-btn");
+    const js_pages = document.querySelectorAll(".js-pages");
+    const js_nav = document.querySelectorAll(".js-nav");
 
-    // Funstions
+    // Functions
     const openModal = () => {
         modal.showModal();
         document.body.style.overflow = "hidden";
@@ -140,13 +148,62 @@ dating_pages.load_landing = async () => {
         document.body.style.userSelect = "auto";
     };
 
+    const openFeed = () => {
+        js_pages.forEach(page => {
+            page.classList.add("not-visible");
+        });
+        feed_page.classList.remove("not-visible");
+        js_nav.forEach(nav => {
+            nav.classList.remove("nav-selected");
+        });
+        feed_page_btn.classList.add("nav-selected");
+    };
+
+    const openChat = () => {
+        js_pages.forEach(page => {
+            page.classList.add("not-visible");
+        });
+        chat_page.classList.remove("not-visible");
+        js_nav.forEach(nav => {
+            nav.classList.remove("nav-selected");
+        });
+        chat_page_btn.classList.add("nav-selected");
+    };
+
+    const openFavorites = () => {
+        js_pages.forEach(page => {
+            page.classList.add("not-visible");
+        });
+        favorites_page.classList.remove("not-visible");
+        js_nav.forEach(nav => {
+            nav.classList.remove("nav-selected");
+        });
+        favorites_page_btn.classList.add("nav-selected");
+    };
+
     //
     profile_1.addEventListener("click", e => {
         e.preventDefault();
         openModal();
     });
+
     close_modal.addEventListener("click", e => {
         e.preventDefault();
         closeModal();
+    });
+
+    feed_page_btn.addEventListener("click", e => {
+        e.preventDefault();
+        openFeed();
+    });
+
+    favorites_page_btn.addEventListener("click", e => {
+        e.preventDefault();
+        openFavorites();
+    });
+
+    chat_page_btn.addEventListener("click", e => {
+        e.preventDefault();
+        openChat();
     });
 };
