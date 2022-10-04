@@ -225,7 +225,7 @@ Landing
 }
 .chat-list {
     background-color: #e8a392;
-    width: 25vw;
+    width: 23vw;
     height: calc(100vh - 80px);
     overflow-y: auto;
 }
