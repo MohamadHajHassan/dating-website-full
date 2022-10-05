@@ -7,6 +7,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FavoritesController;
 use App\Http\Controllers\BlockedController;
 use App\Http\Controllers\ChatController;
+use App\Http\Controllers\UserController;
 
 Route::group(["prefix" => "v0.1"], function(){
 
@@ -22,6 +23,7 @@ Route::group(["prefix" => "v0.1"], function(){
         Route::post("/block/{id}", [BlockedController::class, "blockUnblock"]);
         Route::get("/get-messages/{id}", [ChatController::class, "getMessages"]);
         Route::post("/send-message/{id}", [ChatController::class, "sendMessage"]);
+        Route::post("/update-profile", [UserController::class, "updateProfile"]);
     });
 
 
