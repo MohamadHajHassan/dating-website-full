@@ -15,6 +15,7 @@ Route::group(["prefix" => "v0.1"], function(){
         Route::post("/login", [AuthController::class, "login"]);
         Route::get("/fetch-landing", [LandingController::class, "fetchLanding"]);
         Route::get("/get-favorites", [FavoritesController::class, "getFavorites"]);
+        Route::post("/favorite/{id}", [FavoritesController::class, "addOrRemoveFromFav"]);
     });
 
 
