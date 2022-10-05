@@ -1,6 +1,6 @@
 const dating_pages = {};
 
-dating_pages.baseURL = "http://127.0.0.1:8000/api/v0.1/auth";
+dating_pages.baseURL = "http://127.0.0.1:8000/api/v0.1";
 
 // Custom console
 dating_pages.Console = (title, values, oneValue = true) => {
@@ -123,6 +123,8 @@ dating_pages.load_register = async () => {
 
 dating_pages.load_landing = async () => {
     // Variables
+    const fetch_landing_url = `${dating_pages.baseURL}/auth/fetch-landing`;
+
     const profile_1 = document.getElementById("profile1");
     const profile_2 = document.getElementById("profile2");
     const close_modal = document.getElementById("close-modal");
@@ -182,6 +184,20 @@ dating_pages.load_landing = async () => {
         favorites_page_btn.classList.add("nav-selected");
     };
 
+    const fetchLanding = () => {
+        const users = dating_pages.getAPI(fetch_landing_url);
+        let cards = ``;
+        users.data.map(values => {
+            cards += `
+            <a id="${values.id}" class="flex-column card">
+                <img src="${values.picture}" alt="" />
+                <p>${values.name}</p>
+                <p>${values.location}</p>
+            </a>`;
+        });
+        feed_page.innerHTML = cards;
+    };
+
     //
     profile_1.addEventListener("click", e => {
         e.preventDefault();
@@ -212,4 +228,6 @@ dating_pages.load_landing = async () => {
         e.preventDefault();
         openChat();
     });
+
+    fetchLanding();
 };
