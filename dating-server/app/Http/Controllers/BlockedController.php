@@ -15,6 +15,28 @@ class BlockedController extends Controller{
             "status" => "Success",
             "data" => $blocked
         ]);
-        
+
     }
+
+    function blockUnblock ($user_id){
+        
+        if (Auth::user() -> blocked -> contains($user_id)){
+
+            Auth::user() -> blocked() -> detach($user_id);
+            return response()->json([
+                "status" => "Success",
+                "data" => "Unblocked"
+            ]);
+
+        }else{
+            
+            Auth::user() -> blocked() -> attach($user_id);
+            return response()->json([
+                "status" => "Success",
+                "data" => "Blocked"
+            ]);
+        }
+
+    }
+
 }

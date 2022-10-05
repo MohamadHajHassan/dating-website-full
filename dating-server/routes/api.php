@@ -18,6 +18,7 @@ Route::group(["prefix" => "v0.1"], function(){
         Route::get("/get-favorites", [FavoritesController::class, "getFavorites"]);
         Route::post("/favorite/{id}", [FavoritesController::class, "addOrRemoveFromFav"]);
         Route::get("/get-blocked", [BlockedController::class, "getBlocked"]);
+        Route::post("/block/{id}", [BlockedController::class, "blockUnblock"]);
     });
 
 
