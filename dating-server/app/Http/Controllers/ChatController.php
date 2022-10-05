@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Models\User;
 use Illuminate\Cache\RateLimiting\Limit;
+Use \Carbon\Carbon;
 
 class CHatController extends Controller{
 
@@ -27,4 +28,20 @@ class CHatController extends Controller{
         ]);
 
     }
+
+    function sendMessage(Request $request, $id){
+
+        Auth::user()-> receivingMessage() 
+                    -> attach($id, [
+                        "message" => $request -> message,
+                        "created_at" => Carbon::now()
+                    ]);
+        
+        return response()->json([
+            "status" => "Success",
+            "data" => "Message Sent"
+        ]);
+
+    }
+
 }

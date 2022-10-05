@@ -21,6 +21,7 @@ Route::group(["prefix" => "v0.1"], function(){
         Route::get("/get-blocked", [BlockedController::class, "getBlocked"]);
         Route::post("/block/{id}", [BlockedController::class, "blockUnblock"]);
         Route::get("/get-messages/{id}", [ChatController::class, "getMessages"]);
+        Route::post("/send-message/{id}", [ChatController::class, "sendMessage"]);
     });
 
 
